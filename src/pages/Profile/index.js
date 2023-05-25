@@ -7,7 +7,7 @@ import { useContext, useState } from 'react'
 import './profile.css'
 import { db, storage } from '../../services/firebaseConnections'
 import { doc, updateDoc } from 'firebase/firestore'
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 
 export default function Profile(){
@@ -80,7 +80,7 @@ export default function Profile(){
 
                 setUser(data)
                 storageUser(data)
-                toast.success("Atualizado com sucesso.")
+                toast.info("Atualizado com sucesso.")
             })
         }else if(nome !== '' && imageAvatar !== null){
             //atualizar tanto nome quanto a foto
